@@ -306,26 +306,15 @@
             >
               <input type="text" name="namet" required />
               <input type="email" name="emailt" required />
-
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
+              <!--Honepot-->
+              <input type="text" name="_honey" style="display: none" />
+              <!--Disable Captcha-->
+              <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"
                 name="_next"
                 value="https://aymenhlel.github.io/electroAtef/"
               />
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
-              <div class="d-none" id="submitErrorMessage">
-                <div class="text-center text-danger mb-3">
-                  Error sending message!
-                </div>
-              </div>
-              <!-- Submit Button-->
               <div class="d-grid">
                 <input
                   class="btn btn-primary btn-xl disabled"
