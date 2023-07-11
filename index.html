@@ -304,39 +304,58 @@
               action="https://formsubmit.co/6d231b42c2a2d0f7569115231e874715"
               method="POST"
             >
-              <input type="text" name="namet" required />
-              <input type="email" name="emailt" required />
               <!--Honepot-->
               <input type="text" name="_honey" style="display: none" />
               <!--Disable Captcha-->
               <input type="hidden" name="_captcha" value="false" />
               <!-- Name input-->
-              <input
-                class="form-control"
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Enter your name..."
-                data-sb-validations="required"
-              />
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Enter your name..."
+                  data-sb-validations="required"
+                />
+                <label for="name">Full name</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">
+                  A name is required.
+                </div>
+              </div>
               <!-- Email address input-->
-              <input
-                class="form-control"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="name@example.com"
-                data-sb-validations="required,email"
-              />
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  data-sb-validations="required,email"
+                />
+                <label for="email">Email address</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">
+                  An email is required.
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">
+                  Email is not valid.
+                </div>
+              </div>
               <!-- Phone number input-->
-              <input
-                class="form-control"
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="(123) 456-7890"
-                data-sb-validations="required"
-              />
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  data-sb-validations="required"
+                />
+                <label for="phone">Phone number</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">
+                  A phone number is required.
+                </div>
+              </div>
               <!-- Submit success message-->
               <!---->
               <!-- This is what your users will see when the form-->
@@ -346,6 +365,15 @@
                 name="_next"
                 value="https://aymenhlel.github.io/electroAtef/"
               />
+              <!-- Submit error message-->
+              <!---->
+              <!-- This is what your users will see when there is-->
+              <!-- an error submitting the form-->
+              <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">
+                  Error sending message!
+                </div>
+              </div>
               <!-- Submit Button-->
               <div class="d-grid">
                 <input
